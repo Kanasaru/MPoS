@@ -12,6 +12,7 @@
 #include "mpos_grid.h"
 #include "mpos_sprite.h"
 #include "mpos_forms.h"
+#include "mpos_event.h"
 
 #define MPOS_TIMER_FORMAT "%s: %f ms"
 #define MPOS_SCREENSHOT_FORMAT "%s%s_%02d-%02d-%02d_%02d-%02d-%02d%s"
