@@ -26,7 +26,6 @@ VFLAGS  = -current_version $(VERSION) -compatibility_version $(VERSION)
 
 SOURCES := $(wildcard $(SRCDIR)/*.c)
 OBJECTS := $(SOURCES:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
-rm      = rm -f
 
 $(BINDIR): $(OBJECTS)
 	@ar r $(BINDIR)/$(LIBNAME).a $(OBJECTS)
@@ -56,8 +55,6 @@ endif
 
 .PHONY: clean
 clean:
-	@rm -f $(BINDIR)/$(LIBNAME).a
-	@rm -f $(BINDIR)/$(LIBNAME)-1.0.0.dylib
 	@rm -f $(OBJECTS)
 	$(call colorecho,6,"Cleanup complete!")
 
